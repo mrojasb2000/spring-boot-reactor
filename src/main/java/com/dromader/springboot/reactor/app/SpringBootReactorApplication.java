@@ -17,7 +17,7 @@ public class SpringBootReactorApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
 		Flux<String> names = Flux.just("Andres", "Pedro", "Diego", "Juan")
-				.doOnNext(element -> System.out.println(element));
+				.doOnNext(System.out::println);
 		
 		names.subscribe();
 		
